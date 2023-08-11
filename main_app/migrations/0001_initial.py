@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('date', models.DateField(verbose_name='feeding date ')),
-                ('meal', models.CharField(choices=[('B', 'Breakfast'), ('L', 'Lunch'), ('D', 'Dinner')], default='B', max_length=1)),
+                ('meal', models.CharField(choices=[('W', 'Washington'), ('C', 'California'), ('N', 'NewYork'), ('O', 'Oregon')], default='B', max_length=1)),
                 ('bird', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main_app.bird')),
             ],
             options={

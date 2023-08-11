@@ -4,9 +4,10 @@ from datetime import date
 
 # A tuple of 2-tuples
 MEALS = (
-    ('B', 'Breakfast'),
-    ('L', 'Lunch'),
-    ('D', 'Dinner')
+    ('W', 'Washington'),
+    ('C', 'California'),
+    ('N', 'NewYork'),
+    ('O', 'Oregon')
 )
 
 # Create your models here.
@@ -39,7 +40,7 @@ class Bird(models.Model):
 class Feeding(models.Model):
   date = models.DateField('feeding date ')
   meal = models.CharField(
-    max_length=1,
+    max_length=200,
     # add the 'choices' field option
     choices=MEALS,
     # set the default value for meal to be 'B'
